@@ -1,0 +1,30 @@
+{
+  "name": "@hraya/create-readinglist",
+  "version": "1.0.0",
+  "description": "A CLI to create a reading list from Google",
+  "main": "src/index.js",
+  "bin": {
+    "@hraya/create-readinglist": "bin/create-readingList",
+    "create-readinglist": "bin/create-project"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hraya/8thlight-tech-assesment.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hraya/8thlight-tech-assesment/issues"
+  },
+  "homepage": "https://github.com/hraya/8thlight-tech-assesment#readme",
+  "dependencies": {
+    "esm": "^3.2.25"
+  }
+}
