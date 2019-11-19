@@ -5,7 +5,7 @@
   "main": "src/index.js",
   "bin": {
     "@hraya/create-readinglist": "bin/create-readingList",
-    "create-readinglist": "bin/create-project"
+    "create-readinglist": "bin/create-readingList"
   },
   "publishConfig": {
     "access": "public"
@@ -17,7 +17,10 @@
     "type": "git",
     "url": "git+https://github.com/hraya/8thlight-tech-assesment.git"
   },
-  "keywords": [],
+  "keywords": [
+    "cli",
+    "create-readinglist"
+  ],
   "author": "",
   "license": "ISC",
   "bugs": {
@@ -25,6 +28,10 @@
   },
   "homepage": "https://github.com/hraya/8thlight-tech-assesment#readme",
   "dependencies": {
-    "esm": "^3.2.25"
+    "axios": "^0.19.0",
+    "commander": "^4.0.1",
+    "dotenv": "^8.2.0",
+    "esm": "^3.2.25",
+    "inquirer": "^7.0.0"
   }
 }
