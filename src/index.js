@@ -19,7 +19,7 @@ program
 program
   .command("results")
   .alias("r")
-  .description("See what is in your reading list")
+  .description("See what options you have to save")
   .action(() => {
     const optionsList = getList(optionsListLocation);
     const readingList = getList(readingListLocation);

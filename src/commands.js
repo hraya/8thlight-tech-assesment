@@ -15,7 +15,7 @@ const getBooks = async (subject) => {
             res.data.items.map((book,i) => {
                 const bookInfo = {
                     Option: i,
-                    title:book.volumeInfo.title,
+                    Title:book.volumeInfo.title,
                     Author:book.volumeInfo.authors[0],
                     Publisher: book.volumeInfo.publisher
                 }

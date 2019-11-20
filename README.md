@@ -15,10 +15,12 @@ This application should allow you to:
 
 ## Quick Start
 1. Run `npm install` to install all necessary dependencies.
-2. Create a `.env` file in the root directory. 
+2. Create a `.env` file in the root directory.
+3. Inside the `.env` file add `API_KEY=<Given Google API KEY>` to be able to run search.
 
 ### CLI (npm)
 * location - `src/index.js`
 * commands
+  * View Reading List - `node src/index.js list`
+  * View Search Results - `node src/index.js results`
   * search - `node src/index.js search <subject>`
-  
