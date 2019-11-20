@@ -3,8 +3,9 @@ const fs = require('fs')
 const path = require('path')
 const dotenv = require('dotenv')
 dotenv.config()
-const listLocation = path.join(__dirname, 'optionList.json')
-
+const optionsListLocation = path.join(__dirname, 'optionList.json')
+const readingListLocation = path.join(__dirname, 'readingList.json')
+const bookOptions = []
 const API_KEY = process.env.API_KEY;
 
 
@@ -13,33 +14,41 @@ const getBooks = async (subject) => {
         .then(res => {
             res.data.items.map((book,i) => {
                 const bookInfo = {
-                    Option: i + 1,
+                    Option: i,
                     title:book.volumeInfo.title,
                     Author:book.volumeInfo.authors[0],
                     Publisher: book.volumeInfo.publisher
                 }
                 console.log(bookInfo)
-                fs.appendFileSync(listLocation, JSON.stringify(bookInfo, null, 2))
-            }, console.log(`Run command "node src/index.js list" to view options`))
-        }).catch(err => console.log(err))
+                bookOptions.push(bookInfo)
+            });
+            saveData(bookOptions,optionsListLocation)
+            console.log(`Would you like to save a book to your reading list?`)
+            console.log(`Run command "node src/index.js results"`)
+            
+        })
+        .catch(err => console.log(err))
 }
 
-const getOptionsList = () => {
-    const optionsList = fs.readFileSync(listLocation).toString()
 
-    return JSON.parse(optionsList)
+const getList = (fileLocation) => {
+    const list =fs.readFileSync(fileLocation).toString()
+
+    return JSON.parse(list)
 }
 
-const saveOption = (book) => {
-    fs.writeFileSync(listLocation, JSON.stringify(book, null, 2))
+const saveData = (data, file) => {
+    fs.writeFileSync(file, JSON.stringify(data, null, 2))
 }
 
 
 
 module.exports = {
     getBooks,
-    getOptionsList,
-    saveOption
+    getList,
+    saveData,
+    optionsListLocation,
+    readingListLocation
 }
 
 

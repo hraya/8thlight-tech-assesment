@@ -1,0 +1,32 @@
+[
+  {
+    "Option": 0,
+    "title": "My First Coding Book",
+    "Author": "Kiki Prottsman",
+    "Publisher": "Penguin"
+  },
+  {
+    "Option": 1,
+    "title": "Coding Literacy",
+    "Author": "Annette Vee",
+    "Publisher": "MIT Press"
+  },
+  {
+    "Option": 2,
+    "title": "Coding For Kids For Dummies",
+    "Author": "Camille McCue, Ph.D",
+    "Publisher": "For Dummies"
+  },
+  {
+    "Option": 3,
+    "title": "Introduction to Coding and Information Theory",
+    "Author": "Steven Roman",
+    "Publisher": "Springer Science & Business Media"
+  },
+  {
+    "Option": 4,
+    "title": "HTML and CSS",
+    "Author": "Jon Duckett",
+    "Publisher": "John Wiley & Sons"
+  }
+]
